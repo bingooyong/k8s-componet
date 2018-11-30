@@ -53,7 +53,7 @@ RUN mkdir -p $SSL_TRUSTED_CERTS_FOLDER
 VOLUME $SSL_TRUSTED_CERTS_FOLDER
 
 # Add the files
-ADD rootfs /
+# ADD rootfs /
 
 # Change to root folder
 WORKDIR /root
