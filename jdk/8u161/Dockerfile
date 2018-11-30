@@ -21,7 +21,7 @@ ENV SSL_TRUSTED_CERTS_FOLDER=/opt/ssl/trusted
 # Change to tmp folder
 WORKDIR /tmp
 
-RUN yum -y install wget
+RUN  yum install net-tools tar wget unzip -y && yum clean all
 # Download and extract jdk to opt folder
 RUN wget --no-check-certificate https://github.com/frekele/oracle-java/releases/download/${JDK_VERSION_UPDATE_BUILD}/jdk-${JDK_VERSION_UPDATE_DISTRO_ARCH}.tar.gz \
     && wget --no-check-certificate https://github.com/frekele/oracle-java/releases/download/${JDK_VERSION_UPDATE_BUILD}/jdk-${JDK_VERSION_UPDATE_DISTRO_ARCH}.tar.gz.md5 \
